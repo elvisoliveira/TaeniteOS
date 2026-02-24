@@ -1,0 +1,14 @@
+#!/bin/bash
+# Update distro information in system files
+echo "TaeniteOS" > /etc/hostname
+sed -i "s/debian/TaeniteOS/g" /etc/hosts
+
+# Set up the Desktop directory
+mkdir -p /etc/skel/Desktop
+chmod 755 /etc/skel/Desktop
+
+# Create and configure the live user for the live session
+if ! id -u taenite >/dev/null 2>&1; then
+  useradd -m -s /bin/bash -G sudo taenite
+fi
+echo "taenite:taenite" | chpasswd

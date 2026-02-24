@@ -1,0 +1,7 @@
+#!/bin/bash
+# Set better apt configuration for the live system
+echo 'Acquire::Retries "5";' > /etc/apt/apt.conf.d/80retries
+echo 'APT::Install-Recommends "false";' > /etc/apt/apt.conf.d/80recommends
+
+# Update package lists
+apt-get update

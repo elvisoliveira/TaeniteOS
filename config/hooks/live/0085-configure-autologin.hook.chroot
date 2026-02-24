@@ -1,0 +1,8 @@
+#!/bin/bash
+# Configure LightDM autologin
+mkdir -p /etc/lightdm/lightdm.conf.d/
+cat > /etc/lightdm/lightdm.conf.d/50-autologin.conf << LIGHTDM
+[Seat:*]
+autologin-user=taenite
+autologin-user-timeout=0
+LIGHTDM

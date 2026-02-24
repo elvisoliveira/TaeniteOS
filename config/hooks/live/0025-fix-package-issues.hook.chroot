@@ -1,0 +1,22 @@
+#!/bin/bash
+# Set a less strict apt configuration for building
+cat > /etc/apt/apt.conf.d/99build-fixes << CONF
+APT::Get::Fix-Missing "true";
+APT::Get::Fix-Broken "true";
+Acquire::Check-Valid-Until "false";
+APT::Get::Assume-Yes "true";
+Acquire::Retries "10";
+CONF
+
+# Make sure we have the latest package lists
+apt-get update
+
+# Try to fix any broken packages
+apt-get -f install
+
+# Pre-install critical packages to avoid download issues
+apt-get install --no-install-recommends -y passwd gcc-12-base libc6 gnupg ca-certificates
+
+# Create directory for package cache
+mkdir -p /var/cache/apt/archives/partial
+chmod 755 /var/cache/apt/archives/partial

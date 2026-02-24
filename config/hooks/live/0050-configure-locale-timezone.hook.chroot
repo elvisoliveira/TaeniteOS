@@ -1,0 +1,7 @@
+#!/bin/bash
+# Set the default locale
+echo "en_US.UTF-8" > /etc/default/locale
+
+# Set the timezone
+ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
+echo "America/New_York" > /etc/timezone

@@ -1,0 +1,9 @@
+#!/bin/bash
+# Set the keyboard layout
+cat > /etc/default/keyboard << KEYBOARD
+XKBMODEL="pc105"
+XKBLAYOUT="us"
+XKBVARIANT=""
+XKBOPTIONS=""
+BACKSPACE="guess"
+KEYBOARD
