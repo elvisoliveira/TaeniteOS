@@ -1,1 +1,1 @@
-openbox lightdm  xserver-xorg xinit
+openbox lightdm xserver-xorg xinit tint2
