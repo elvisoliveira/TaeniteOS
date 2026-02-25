@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=XTerm
-Comment=Terminal emulator
-Exec=xterm
-Icon=xterm-color
-Terminal=false
-Categories=System;TerminalEmulator;

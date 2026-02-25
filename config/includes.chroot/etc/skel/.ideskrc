@@ -1,0 +1,30 @@
+table Config
+  FontName: sans
+  FontSize: 9
+  FontColor: #ffffff
+  Antialias: true
+  Bold: false
+  ClickDelay: 300
+  SingleClick: false
+  IconSnap: true
+  SnapWidth: 10
+  SnapHeight: 10
+  SnapOrigin: BottomRight
+  SnapShadow: false
+  SnapShadowTrans: 150
+  CaptionOnHover: false
+  CaptionPlacement: bottom
+  Shadow: false
+  ShadowColor: #000000
+  ShadowOpacity: 50
+  ShadowX: 2
+  ShadowY: 2
+end
+table Actions
+  Lock: control right doubleClk
+  Reload: middle doubleClk
+  Drag: left hold
+  EndDrag: left singleClk
+  Execute[0]: left doubleClk
+  Execute[1]: right doubleClk
+end

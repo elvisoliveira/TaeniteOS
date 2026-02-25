@@ -1,0 +1,7 @@
+table Icon
+  Caption: Shutdown
+  Command: sudo shutdown -h now
+  Icon: /usr/share/icons/Adwaita/48x48/actions/system-shutdown-symbolic.symbolic.png
+  X: 50
+  Y: 190
+end
