@@ -13,11 +13,11 @@
   "DefaultSearchProviderEnabled": false,
   "DeveloperToolsDisabled": true,
   "EditBookmarksEnabled": false,
-  "EnableCommonNameFallbackForLocalAnchors": true,
   "EnableMediaRouter": false,
   "ExtensionInstallBlocklist": [
     "*"
   ],
+  "DownloadRestrictions": 3,
   "HideWebStoreIcon": true,
   "HomepageIsNewTabPage": false,
   "ImportAutofillFormData": false,
@@ -35,10 +35,14 @@
   "SpellcheckEnabled": true,
   "TranslateEnabled": false,
   "AllowDinosaurEasterEgg": false,
-  "URLBlacklist": [
-    "https://chrome.google.com",
+  "AllowFileSelectionDialogs": false,
+  "URLBlocklist": [
     "chrome://downloads/",
     "chrome://extensions/",
-    "chrome://flags/"
+    "chrome://flags/",
+    "chrome://",
+    "chrome://*",
+    "file://",
+    "file://*"
   ]
 }

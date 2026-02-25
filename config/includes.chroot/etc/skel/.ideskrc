@@ -22,7 +22,7 @@ table Config
   Background.Enabled: true
   Background.Source: file
   Background.File: /usr/share/backgrounds/taenite/nl/1024x768.jpg
-  Background.Mode: stretch
+  Background.Mode: Fit
 end
 table Actions
   Lock: control right doubleClk

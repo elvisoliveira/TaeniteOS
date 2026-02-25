@@ -1,0 +1,9 @@
+table Icon
+  Caption: Extranet
+  Command: bash ~/extranet.sh
+  Icon: /usr/share/pixmaps/taenite/Extranet.png
+  Width: 48
+  Height: 48
+  X: 50
+  Y: 330
+end
