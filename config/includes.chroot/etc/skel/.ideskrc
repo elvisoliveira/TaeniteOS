@@ -7,22 +7,22 @@ table Config
   ClickDelay: 300
   SingleClick: false
   IconSnap: true
-  SnapWidth: 10
-  SnapHeight: 10
+  SnapWidth: 20
+  SnapHeight: 20
   SnapOrigin: BottomRight
   SnapShadow: false
   SnapShadowTrans: 150
   CaptionOnHover: false
   CaptionPlacement: bottom
-  Shadow: false
+  Shadow: true
   ShadowColor: #000000
-  ShadowOpacity: 50
+  ShadowOpacity: 70
   ShadowX: 2
   ShadowY: 2
   Background.Enabled: true
   Background.Source: file
-  Background.File: /usr/share/backgrounds/taenite/nl/1024x768.jpg
-  Background.Mode: Fit
+  Background.File: /usr/share/backgrounds/taenite/nl/1920x1080.jpg
+  Background.Mode: Scale
 end
 table Actions
   Lock: control right doubleClk

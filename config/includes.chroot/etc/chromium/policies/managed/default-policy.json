@@ -14,24 +14,21 @@
   "DeveloperToolsDisabled": true,
   "EditBookmarksEnabled": false,
   "EnableMediaRouter": false,
-  "ExtensionInstallBlocklist": [
-    "*"
-  ],
   "DownloadRestrictions": 3,
   "HideWebStoreIcon": true,
   "HomepageIsNewTabPage": false,
   "ImportAutofillFormData": false,
   "ImportBookmarks": false,
-  "IncognitoModeAvailability": "2",
+  "IncognitoModeAvailability": 1,
   "PasswordManagerEnabled": false,
   "ProxyMode": "direct",
-  "RestoreOnStartup": 5,
+  "RestoreOnStartup": 4,
   "SavingBrowserHistoryDisabled": true,
   "SearchSuggestEnabled": false,
   "ShowAppsShortcutInBookmarkBar": false,
   "ShowHomeButton": false,
   "SyncDisabled": true,
-  "SpellCheckServiceEnabled": true,
+  "SpellCheckServiceEnabled": false,
   "SpellcheckEnabled": true,
   "TranslateEnabled": false,
   "AllowDinosaurEasterEgg": false,
@@ -40,9 +37,6 @@
     "chrome://downloads/",
     "chrome://extensions/",
     "chrome://flags/",
-    "chrome://",
-    "chrome://*",
-    "file://",
     "file://*"
   ]
 }
