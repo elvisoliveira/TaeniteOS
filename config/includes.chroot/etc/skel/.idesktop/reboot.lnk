@@ -1,9 +1,9 @@
 table Icon
   Caption: Reboot
-  Command: sudo shutdown -r now
+  Command: bash ~/restart-confirm.sh
   Icon: /usr/share/icons/Adwaita/48x48/actions/system-reboot-symbolic.symbolic.png
   Width: 48
   Height: 48
   X: 50
-  Y: 140
+  Y: 150
 end

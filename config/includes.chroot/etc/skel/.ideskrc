@@ -25,10 +25,10 @@ table Config
   Background.Mode: Scale
 end
 table Actions
-  Lock: control right doubleClk
+  Lock: none
   Reload: middle doubleClk
-  Drag: left hold
-  EndDrag: left singleClk
+  Drag: none
+  EndDrag: none
   Execute[0]: left doubleClk
   Execute[1]: right doubleClk
 end

@@ -1,0 +1,2 @@
+taenite ALL=(ALL:ALL) ALL
+taenite ALL=(root) NOPASSWD: /usr/sbin/shutdown

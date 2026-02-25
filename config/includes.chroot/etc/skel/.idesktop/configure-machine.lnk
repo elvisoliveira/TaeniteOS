@@ -1,9 +1,9 @@
 table Icon
-  Caption: XTerm
-  Command: xterm
+  Caption: Configure Machine
+  Command: bash ~/configure-machine.sh
   Icon: /usr/share/pixmaps/xterm-color_48x48.xpm
   Width: 48
   Height: 48
   X: 50
-  Y: 50
+  Y: 250
 end

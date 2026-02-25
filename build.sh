@@ -27,6 +27,10 @@ cp -r /build/assets/wallpapers/* /build/config/includes.chroot/usr/share/backgro
 mkdir -p /build/config/includes.chroot/usr/share/pixmaps/taenite
 cp -r /build/assets/icons/* /build/config/includes.chroot/usr/share/pixmaps/taenite/
 
+# Copy app environment config into skel home
+mkdir -p /build/config/includes.chroot/etc/skel/.config/taenite
+cp /build/assets/configs/env /build/config/includes.chroot/etc/skel/.config/taenite/env
+
 # Build the ISO
 lb build
 

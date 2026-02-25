@@ -21,6 +21,7 @@
   "ImportBookmarks": false,
   "IncognitoModeAvailability": 1,
   "PasswordManagerEnabled": false,
+  "BrowserGuestFashionEnforced": true,
   "ProxyMode": "direct",
   "RestoreOnStartup": 4,
   "SavingBrowserHistoryDisabled": true,

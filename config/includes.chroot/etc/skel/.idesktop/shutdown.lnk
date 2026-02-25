@@ -1,9 +1,9 @@
 table Icon
   Caption: Shutdown
-  Command: sudo shutdown -h now
+  Command: bash ~/shutdown-confirm.sh
   Icon: /usr/share/icons/Adwaita/48x48/actions/system-shutdown-symbolic.symbolic.png
   Width: 48
   Height: 48
   X: 50
-  Y: 230
+  Y: 50
 end
