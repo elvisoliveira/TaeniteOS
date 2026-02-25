@@ -1,0 +1,7 @@
+table Icon
+  Caption: EPOS Web
+  Command: bash ~/epos-web.sh
+  Icon: /usr/share/pixmaps/taenite/webtrolley_nl.png
+  X: 50
+  Y: 260
+end

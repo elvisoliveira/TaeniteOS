@@ -19,6 +19,14 @@ lb config \
 # Make hooks executable
 find /build/config/hooks/ -type f -name "*.hook.*" -exec chmod +x {} \;
 
+# Copy wallpapers into the live filesystem
+mkdir -p /build/config/includes.chroot/usr/share/backgrounds/taenite
+cp -r /build/assets/wallpapers/* /build/config/includes.chroot/usr/share/backgrounds/taenite/
+
+# Copy icons into the live filesystem
+mkdir -p /build/config/includes.chroot/usr/share/pixmaps/taenite
+cp -r /build/assets/icons/* /build/config/includes.chroot/usr/share/pixmaps/taenite/
+
 # Build the ISO
 lb build
 

@@ -8,6 +8,7 @@ WORKDIR /build
 
 # Copy config and build script
 COPY config/ /build/config/
+COPY assets/ /build/assets/
 COPY build.sh /build/build.sh
 
 # Create output directory
