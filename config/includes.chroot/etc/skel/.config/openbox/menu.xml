@@ -12,7 +12,7 @@
       </action>
     </item>
     <separator />
-    <item label="Restart">
+    <item label="Reboot">
       <action name="Execute">
         <command>sudo shutdown -r now</command>
       </action>

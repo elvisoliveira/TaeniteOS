@@ -1,0 +1,44 @@
+{
+  "ExtensionSettings": {
+    "*": {
+      "installation_mode": "blocked"
+    }
+  },
+  "AlwaysOpenPdfExternally": false,
+  "AutoFillEnabled": false,
+  "BlockThirdPartyCookies": false,
+  "BookmarkBarEnabled": false,
+  "DefaultBrowserSettingEnabled": false,
+  "DefaultGeolocationSetting": 2,
+  "DefaultSearchProviderEnabled": false,
+  "DeveloperToolsDisabled": true,
+  "EditBookmarksEnabled": false,
+  "EnableCommonNameFallbackForLocalAnchors": true,
+  "EnableMediaRouter": false,
+  "ExtensionInstallBlocklist": [
+    "*"
+  ],
+  "HideWebStoreIcon": true,
+  "HomepageIsNewTabPage": false,
+  "ImportAutofillFormData": false,
+  "ImportBookmarks": false,
+  "IncognitoModeAvailability": "2",
+  "PasswordManagerEnabled": false,
+  "ProxyMode": "direct",
+  "RestoreOnStartup": 5,
+  "SavingBrowserHistoryDisabled": true,
+  "SearchSuggestEnabled": false,
+  "ShowAppsShortcutInBookmarkBar": false,
+  "ShowHomeButton": false,
+  "SyncDisabled": true,
+  "SpellCheckServiceEnabled": true,
+  "SpellcheckEnabled": true,
+  "TranslateEnabled": false,
+  "AllowDinosaurEasterEgg": false,
+  "URLBlacklist": [
+    "https://chrome.google.com",
+    "chrome://downloads/",
+    "chrome://extensions/",
+    "chrome://flags/"
+  ]
+}

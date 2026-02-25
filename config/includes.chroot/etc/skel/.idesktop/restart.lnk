@@ -1,5 +1,5 @@
 table Icon
-  Caption: Restart
+  Caption: Reboot
   Command: sudo shutdown -r now
   Icon: /usr/share/icons/Adwaita/48x48/actions/system-reboot-symbolic.symbolic.png
   X: 50

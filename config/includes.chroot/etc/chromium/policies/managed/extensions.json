@@ -1,9 +1,0 @@
-{
-  "ExtensionInstallBlocklist": ["*"],
-  "ExtensionInstallForcelist": [],
-  "ExtensionSettings": {
-    "*": {
-      "installation_mode": "blocked"
-    }
-  }
-}
