@@ -31,6 +31,14 @@ cp -r /build/assets/icons/* /build/config/includes.chroot/usr/share/pixmaps/taen
 mkdir -p /build/config/includes.chroot/etc/skel/.config/taenite/
 cp /build/assets/configs/* /build/config/includes.chroot/etc/skel/.config/taenite/
 
+# Copy custom printer PPDs into the live filesystem
+mkdir -p /build/config/includes.chroot/etc/cups/ppd
+cp /build/assets/ppds/* /build/config/includes.chroot/etc/cups/ppd/
+
+# Copy custom CUPS filters into the live filesystem
+mkdir -p /build/config/includes.chroot/usr/lib/cups/filter
+cp /build/assets/filters/* /build/config/includes.chroot/usr/lib/cups/filter/
+
 # Optional VirtualBox guest additions
 INSTALL_VBOX_GUEST_ADDITIONS="${INSTALL_VBOX_GUEST_ADDITIONS:-false}"
 echo "Install VirtualBox guest additions: $INSTALL_VBOX_GUEST_ADDITIONS"

@@ -2,6 +2,7 @@
 CONFIG="$HOME/machine-config.txt"
 ENV_DIR="$HOME/.config/taenite"
 
+# shellcheck disable=SC1090
 . "$ENV_DIR/env"
 
 if [ "${1:-}" != "--run" ]; then
@@ -22,8 +23,7 @@ fi
 
 if [ -z "${SHOP_ID:-}" ] || 
    [ -z "${TILL_ID:-}" ] || 
-   [ -z "${STATIC_IP_ADDRESS:-}" ] || 
-   [ -z "${NETWORK_PRINTER_IP_ADDRESS:-}" ]; then
+   [ -z "${STATIC_IP_ADDRESS:-}" ]; then
   echo "Machine configuration is incomplete."
   echo "Run 'Configure Machine' again and fill all fields."
   echo
@@ -36,8 +36,7 @@ if ! app_url="$(
     "$ENV_DIR/epos-web-next.json" \
     "$NEXT" \
     "$SHOP_ID" \
-    "$TILL_ID" \
-    "$NETWORK_PRINTER_IP_ADDRESS"
+    "$TILL_ID"
 )"; then
   echo "Failed to build EPOS settings URL."
   echo
@@ -49,16 +48,7 @@ echo "Starting EPOS Web..."
 echo "Please wait while Chromium opens."
 echo
 
-temp="/tmp/eposnext"
-
-trap 'rm -rf "$temp"' EXIT INT TERM
-
-rm -rf "$temp"
-mkdir -p "$temp"
-touch "$temp/First Run"
-
 setsid chromium \
-  --user-data-dir="$temp" \
   --password-store=basic \
   --disable-print-preview \
   --start-maximized \

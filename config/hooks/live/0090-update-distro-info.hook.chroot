@@ -8,12 +8,11 @@ if ! id -u taenite >/dev/null 2>&1; then
   useradd -m -s /bin/bash taenite
 fi
 
+# Ensure the user does not retain sudo privileges
 if id -nG taenite | grep -qw sudo; then
   gpasswd -d taenite sudo || true
 fi
 
 echo "taenite:taenite" | chpasswd
 
-if [ -f /etc/sudoers.d/taenite ]; then
-  chmod 0440 /etc/sudoers.d/taenite
-fi
+usermod -aG plugdev taenite

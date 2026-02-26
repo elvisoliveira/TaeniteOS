@@ -1,3 +1,8 @@
 sudo
 zstd
+cups
+libcupsimage2
+snmp
 locales
+openssh-server
+usbutils

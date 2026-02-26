@@ -1,6 +1,5 @@
 vim
-xterm
 htop
-openssh-server
-chromium
+xterm
 zenity
+chromium

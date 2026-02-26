@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -u
 
 CONFIG_FILE="$HOME/machine-config.txt"
@@ -60,22 +59,26 @@ if ! sudo -v; then
   read -r -p "Press Enter to close..."
   exit 1
 fi
-echo
 
 shop_id="$(ask_non_empty "Shop ID (Acronym)")"
 till_id="$(ask_non_empty "Till ID")"
 static_ip="$(ask_ipv4 "Static IP Address")"
-printer_ip="$(ask_ipv4 "Network Printer IP Address")"
 
 umask 077
 cat > "$CONFIG_FILE" <<EOF
 SHOP_ID="$shop_id"
 TILL_ID="$till_id"
 STATIC_IP_ADDRESS="$static_ip"
-NETWORK_PRINTER_IP_ADDRESS="$printer_ip"
 EOF
 
-echo
-echo "Configuration saved."
-echo
+if ! sudo python3 "$HOME/cups.py"; then
+  echo
+  echo "Printer configuration failed."
+  echo "Machine configuration was saved, but printers may not be configured."
+  echo
+  read -r -p "Press Enter to close..."
+  exit 1
+fi
+
+echo "Printer configuration completed."
 read -r -p "Press Enter to close..."

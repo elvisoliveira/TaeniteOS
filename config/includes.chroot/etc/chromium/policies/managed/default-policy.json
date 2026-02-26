@@ -1,9 +1,4 @@
 {
-  "ExtensionSettings": {
-    "*": {
-      "installation_mode": "blocked"
-    }
-  },
   "AlwaysOpenPdfExternally": false,
   "AutoFillEnabled": false,
   "BlockThirdPartyCookies": false,

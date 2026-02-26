@@ -4,6 +4,6 @@ table Icon
   Icon: /usr/share/icons/Adwaita/48x48/actions/system-shutdown-symbolic.symbolic.png
   Width: 48
   Height: 48
-  X: 250
-  Y: 50
+  X: 150
+  Y: 150
 end
