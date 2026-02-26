@@ -1,1 +1,6 @@
-vim xterm htop openssh-server chromium gxmessage
+vim
+xterm
+htop
+openssh-server
+chromium
+zenity

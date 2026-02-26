@@ -4,6 +4,6 @@ table Icon
   Icon: /usr/share/icons/Adwaita/48x48/actions/system-reboot-symbolic.symbolic.png
   Width: 48
   Height: 48
-  X: 50
-  Y: 150
+  X: 150
+  Y: 50
 end

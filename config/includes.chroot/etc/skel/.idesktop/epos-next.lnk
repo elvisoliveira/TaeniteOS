@@ -1,9 +1,9 @@
 table Icon
-  Caption: EPOS Web
-  Command: bash ~/epos-web.sh
+  Caption: EPOS Next
+  Command: bash ~/epos-next.sh
   Icon: /usr/share/pixmaps/taenite/webtrolley_nl.png
   Width: 48
   Height: 48
   X: 50
-  Y: 350
+  Y: 150
 end

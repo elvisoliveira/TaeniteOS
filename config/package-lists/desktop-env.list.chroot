@@ -1,1 +1,6 @@
-openbox lightdm xserver-xorg xinit tint2 idesk
+openbox
+lightdm
+xserver-xorg
+xinit
+tint2
+idesk

@@ -1,30 +1,31 @@
 #!/bin/bash
+ENV_DIR="$HOME/.config/taenite/env"
+ENV="$ENV_DIR/env"
+
+# shellcheck disable=SC1090
+. "$ENV"
 
 if [ "${1:-}" != "--run" ]; then
   exec xterm -T "Launching Extranet" -geometry 90x12 -e bash "$0" --run
 fi
 
-app_env_file="$HOME/.config/taenite/env"
-tmpdir="/tmp/extranet"
-# shellcheck disable=SC1090
-. "$app_env_file"
-targetURL="$EXTRANET"
-trap 'rm -rf "$tmpdir"' EXIT INT TERM
+temp="/tmp/extranet"
+trap 'rm -rf "$temp"' EXIT INT TERM
 
 echo "Starting Extranet..."
 echo "Please wait while Chromium opens."
 echo
 
-rm -rf "$tmpdir"
-mkdir -p "$tmpdir"
-touch "$tmpdir/First Run"
+rm -rf "$temp"
+mkdir -p "$temp"
+touch "$temp/First Run"
 
 setsid chromium \
-  --user-data-dir="$tmpdir" \
+  --user-data-dir="$temp" \
   --password-store=basic \
   --disable-print-preview \
   --start-maximized \
-  --app="$targetURL" \
+  --app="$EXTRANET" \
   </dev/null >/dev/null 2>&1 &
 
 sleep 5

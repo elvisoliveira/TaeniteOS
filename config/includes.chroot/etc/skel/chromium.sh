@@ -1,14 +1,14 @@
 #!/bin/bash
 
-tmpdir="/tmp/chromium"
-trap 'rm -rf "$tmpdir"' EXIT INT TERM
+TEMP="/tmp/chromium"
+trap 'rm -rf "$TEMP"' EXIT INT TERM
 
-rm -rf "$tmpdir"
-mkdir -p "$tmpdir"
-touch "$tmpdir/First Run"
+rm -rf "$TEMP"
+mkdir -p "$TEMP"
+touch "$TEMP/First Run"
 
 exec chromium \
-  --user-data-dir="$tmpdir" \
+  --user-data-dir="$TEMP" \
   --password-store=basic \
   --disable-print-preview \
   --start-maximized

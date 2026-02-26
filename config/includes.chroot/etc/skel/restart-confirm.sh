@@ -1,8 +1,9 @@
 #!/bin/bash
 
-if gxmessage -center -title "Confirm Reboot" \
-  -buttons "Cancel:1,Reboot:0" \
-  -default "Cancel" \
-  "Reboot this machine now?"; then
+if zenity --question \
+  --title="Confirm Reboot" \
+  --text="Reboot this machine now?" \
+  --ok-label="Reboot" \
+  --cancel-label="Cancel"; then
   sudo shutdown -r now
 fi

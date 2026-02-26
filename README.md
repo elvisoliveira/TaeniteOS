@@ -29,6 +29,37 @@ docker run --rm --privileged \
 
 Your ISO will be in the `output/` directory.
 
+### Optional VirtualBox Guest Additions
+
+Use `INSTALL_VBOX_GUEST_ADDITIONS` to control whether VirtualBox guest packages are included.
+
+- `false` (default): no VirtualBox guest additions
+- `true`: includes `virtualbox-guest-utils` and `virtualbox-guest-x11`
+
+Build with VirtualBox guest additions enabled:
+
+```bash
+docker build --build-arg INSTALL_VBOX_GUEST_ADDITIONS=true -t taenite-builder:vbox .
+docker run --rm --privileged \
+  --security-opt apparmor=unconfined \
+  --security-opt seccomp=unconfined \
+  --network=host \
+  -v ./output:/build/output \
+  taenite-builder:vbox
+```
+
+You can also override at runtime (works for either image):
+
+```bash
+docker run --rm --privileged \
+  --security-opt apparmor=unconfined \
+  --security-opt seccomp=unconfined \
+  --network=host \
+  -e INSTALL_VBOX_GUEST_ADDITIONS=true \
+  -v ./output:/build/output \
+  taenite-builder
+```
+
 **Note**: This also works with `nerdctl` (containerd) by simply replacing `docker` with `nerdctl` in the commands above.
 
 ## Why Use This?

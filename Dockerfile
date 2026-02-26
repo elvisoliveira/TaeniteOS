@@ -4,6 +4,10 @@ FROM debian:12
 RUN apt-get update && apt-get install -y \
     live-build
 
+# Optional feature toggle for VirtualBox guest additions
+ARG INSTALL_VBOX_GUEST_ADDITIONS=false
+ENV INSTALL_VBOX_GUEST_ADDITIONS=${INSTALL_VBOX_GUEST_ADDITIONS}
+
 WORKDIR /build
 
 # Copy config and build script

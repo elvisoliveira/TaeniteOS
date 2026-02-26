@@ -19,10 +19,10 @@ table Config
   ShadowOpacity: 70
   ShadowX: 2
   ShadowY: 2
-  Background.Enabled: true
+  Background.Color: #004F9E
   Background.Source: file
-  Background.File: /usr/share/backgrounds/taenite/nl/1920x1080.jpg
-  Background.Mode: Scale
+  Background.File: /usr/share/backgrounds/taenite/nl/tools.jpg
+  Background.Mode: Center
 end
 table Actions
   Lock: none

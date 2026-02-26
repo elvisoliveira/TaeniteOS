@@ -28,8 +28,17 @@ mkdir -p /build/config/includes.chroot/usr/share/pixmaps/taenite
 cp -r /build/assets/icons/* /build/config/includes.chroot/usr/share/pixmaps/taenite/
 
 # Copy app environment config into skel home
-mkdir -p /build/config/includes.chroot/etc/skel/.config/taenite
-cp /build/assets/configs/env /build/config/includes.chroot/etc/skel/.config/taenite/env
+mkdir -p /build/config/includes.chroot/etc/skel/.config/taenite/
+cp /build/assets/configs/* /build/config/includes.chroot/etc/skel/.config/taenite/
+
+# Optional VirtualBox guest additions
+INSTALL_VBOX_GUEST_ADDITIONS="${INSTALL_VBOX_GUEST_ADDITIONS:-false}"
+echo "Install VirtualBox guest additions: $INSTALL_VBOX_GUEST_ADDITIONS"
+
+VBOX_LIST_FILE="/build/config/package-lists/virtualbox-guest.list.chroot"
+if [ "$INSTALL_VBOX_GUEST_ADDITIONS" != "true" ]; then
+  rm -f "$VBOX_LIST_FILE"
+fi
 
 # Build the ISO
 lb build
